@@ -1,0 +1,41 @@
+<div>
+    <label>Student Number</label><input type="text" [value]="studentRecord.studNo" (input)="updateField('studNo', $event.target as HTMLInputElement)"><br>
+    <label>Student First Name</label><input type="text" [value]="studentRecord.studFirstName" (input)="updateField('studFirstName', $event.target as HTMLInputElement)"><br>
+    <label>Student Last Name</label><input type="text" [value]="studentRecord.studLastName" (input)="updateField('studLastName', $event.target as HTMLInputElement)"><br>
+    <label>Student Program</label><input type="text" [value]="studentRecord.studProgram" (input)="updateField('studProgram', $event.target as HTMLInputElement)"><br>
+    <label>Student Year</label><input type="text" [value]="studentRecord.studYear" (input)="updateField('studYear', $event.target as HTMLInputElement)"><br>
+</div>
+<!-- {{ studentRecord.studFirstName }} -->
+<div id="options">
+    <button class="btn btn-primary" id="addStudents" (click)="addStudentRecord()">
+        Add Student Entry 
+    </button>
+    <button class="btn btn-default" id="listStudents" (click)="listStudents()">
+        List Students
+    </button>   
+</div>
+<div>
+
+</div>
+<div *ngIf="printingAllowed">
+    <table>
+        <thead>
+        <tr>
+            <th>Student Number</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Program Enrolled</th>
+            <th>Year</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let student of studentCollection">
+               <td>{{ student.studNo }}</td>
+               <td>{{ student.studFirstName }}</td>
+               <td>{{ student.studLastName }}</td>
+               <td>{{ student.studProgram }}</td>
+               <td>{{ student.studYear }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
