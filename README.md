@@ -39,3 +39,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Notes
 
 In class we are introduced to Angular's FormControl and ReactiveFormModules
+
+## Updates
+
+guba pa ang putang ina kay hinay kay ang CloudSwyft mf!
